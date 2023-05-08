@@ -1,3 +1,3 @@
-#!/usr/bin/python3
+#!/bin/bash/python3
 number = 98
-print(f"{number})
+print(f"{number:d})
