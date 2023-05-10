@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
 def uppercase(str):
     for i in str:
@@ -7,4 +7,4 @@ def uppercase(str):
         else:
             c = i
         print("{}".format(c), end="")
-    print()
+    print()  
