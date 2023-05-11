@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-
-import easy_print
+if __name__ == '__main__':
+    import easy_print
