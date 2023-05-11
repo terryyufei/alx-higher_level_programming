@@ -2,8 +2,8 @@
 
 from sys import argv
 
-add = 0
+sum = 0
 for arg in argv[1:]:
-    add += int(arg)
+    sum += int(arg)
 
-print(add)
+print(sum)
