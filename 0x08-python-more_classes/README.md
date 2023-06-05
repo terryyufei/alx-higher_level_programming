@@ -102,3 +102,10 @@
 > Incremented during each new instance instantiation
 > Decremented during each instance deletion
 
+*TASK 7*
+> ALL the instructions in task 6, plus
+> Public class attribute print_symbol:
+> Initialized to #
+> Used as symbol for string representation
+> Can be any type
+
