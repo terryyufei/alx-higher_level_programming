@@ -109,3 +109,11 @@
 > Used as symbol for string representation
 > Can be any type
 
+*TASK 8*
+> ALL the instructions in task 6, plus
+> Static method def bigger_or_equal(rect_1, rect_2): that returns the biggest rectangle based on the area
+> rect_1 must be an instance of Rectangle, otherwise raise a TypeError exception with the message rect_1 must be an instance of Rectangle
+
+> rect_2 must be an instance of Rectangle, otherwise raise a TypeError exception with the message rect_2 must be an instance of Rectangle
+> Returns rect_1 if both have the same area value
+
