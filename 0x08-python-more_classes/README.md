@@ -117,3 +117,7 @@
 > rect_2 must be an instance of Rectangle, otherwise raise a TypeError exception with the message rect_2 must be an instance of Rectangle
 > Returns rect_1 if both have the same area value
 
+*TASK 9*
+> ALL the instructions in task 7, plus
+> Class method def square(cls, size=0): that returns a new Rectangle instance with width == height == size
+
