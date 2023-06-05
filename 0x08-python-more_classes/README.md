@@ -95,3 +95,10 @@
 > ALL the instructions in task 4, plus
 > Print the message Bye rectangle... (... being 3 dots not ellipsis) when an instance of Rectangle is deleted
 
+*TASK 6*
+> ALL the instructions in task 5, plus
+> Public class attribute number_of_instances:
+> Initialized to 0
+> Incremented during each new instance instantiation
+> Decremented during each instance deletion
+
