@@ -68,10 +68,10 @@ class Rectangle:
         """Return a string representation"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
-    @classmethod
-    def square(cls, size=0):
-        """returns a new Rectangle instance  with width == height == size"""
-        return cls(width=size, height=size)
+    def __del__(self):
+        """Sets the del behavior of the Rectangle object."""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
@@ -85,7 +85,7 @@ class Rectangle:
         else:
             return rect_2
 
-    def __del__(self):
-        """Sets the del behavior of the Rectangle object."""
-        Rectangle.number_of_instances -= 1
-        print("Bye rectangle...")
+    @classmethod
+    def square(cls, size=0):
+        width = height = size
+        return cls(width, height)
