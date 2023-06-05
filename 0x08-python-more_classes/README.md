@@ -91,3 +91,7 @@
 > repr() should return a string representation of the rectangle to be able to recreate a new instance by using eval()
 > You are not allowed to import any module
 
+*TASK 5*
+> ALL the instructions in task 4, plus
+> Print the message Bye rectangle... (... being 3 dots not ellipsis) when an instance of Rectangle is deleted
+
