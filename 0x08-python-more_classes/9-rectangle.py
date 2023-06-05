@@ -68,11 +68,6 @@ class Rectangle:
         """Return a string representation"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
-    def __del__(self):
-        """Sets the del behavior of the Rectangle object."""
-        Rectangle.number_of_instances -= 1
-        print("Bye rectangle...")
-
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """returns the biggest rectangle based on the area"""
@@ -89,3 +84,8 @@ class Rectangle:
     def square(cls, size=0):
         """returns a new Rectangle instance  with width == height == size"""
         return cls(size, size)
+
+    def __del__(self):
+        """Sets the del behavior of the Rectangle object."""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
