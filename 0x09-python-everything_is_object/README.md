@@ -1,1 +1,1 @@
-## Everthing is object
+## Everything is object
