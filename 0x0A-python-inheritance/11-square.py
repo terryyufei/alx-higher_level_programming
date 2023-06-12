@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""importing BaseGeometry & Rectangle"""
+"""importing Rectangle"""
 
 Rectangle = __import__('9-rectangle').Rectangle
 
@@ -21,4 +21,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """Return and print the square description"""
-        return "[square] {}/{}".format(self.__size, self.__size)
+        return "[square] {:d}/{:d}".format(self.__size, self.__size)
