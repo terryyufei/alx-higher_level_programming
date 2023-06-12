@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""The module is 8-base_geometry"""
+"""The module is 9-rectangle"""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
@@ -18,7 +18,7 @@ class Rectangle(BaseGeometry):
     def area(self):
         """returns area of a rectangle and overrides area() from superclass"""
         return self.__width * self.__height
-
+    
     def __str__(self):
         """Returns a human readable string representation"""
         return str("[Rectangle] {}/{}".format(self.__width, self.__height))
