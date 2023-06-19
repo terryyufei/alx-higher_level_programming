@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-from models.rectangle import Rectangle
-
 """Write a child class Square"""
+
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -16,7 +16,7 @@ class Square(Rectangle):
     """
     def __init__(self, size, x=0, y=0, id=None):
         """class constructor"""
-        super().__init__(id=id, x=x, y=y, width=size, height=size)   
+        super().__init__(id=id, x=x, y=y, width=size, height=size)
 
     def __str__(self):
         """Returns a string representation of a square instance"""
