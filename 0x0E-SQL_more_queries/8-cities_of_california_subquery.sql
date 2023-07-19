@@ -3,10 +3,10 @@
 -- not allowed to use the JOIN keyword
 
 SELECT id, name
-FROM hbtn_0d_usa.cities
+FROM cities
 WHERE state_id = (
     SELECT id
-    FROM hbtn_0d_usa.states
+    FROM states
     WHERE name = 'california'
 )
 ORDER BY id ASC;
