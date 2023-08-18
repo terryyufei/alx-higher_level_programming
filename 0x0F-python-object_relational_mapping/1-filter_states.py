@@ -19,7 +19,9 @@ if __name__ == "__main__":
     # create the cusror && execute the query
     my_cursor = my_db.cursor()
     my_cursor.execute(
-        "SELECT * FROM states WHERE name LIKE 'N%'ORDER BY states.id ASC"
+        """SELECT * FROM states WHERE name LIKE
+        BINARY 'N%'ORDER BY states.id ASC
+        """
         )
 
     # fetch the data queried
