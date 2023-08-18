@@ -7,7 +7,7 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
 
-    # connect the db
+    # connect the db using command-line arguments
     my_db = MySQLdb.connect(
         host="localhost",
         port=3306,
