@@ -23,6 +23,6 @@ if __name__ == "__main__":
     for state in my_session.query(State).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
         for city in state.cities:
-            print("     {}: {}".format(city.id, city.name))
+            print("    {}: {}".format(city.id, city.name))
 
     my_session.close()
