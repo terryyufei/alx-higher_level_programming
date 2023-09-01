@@ -18,5 +18,5 @@ if __name__ == "__main__":
 
     # Make a POST request to the provided URL with the email parameter
     with request.urlopen(url, data=data_encoded) as response:
-        # read and decode the response bodt in utf-8
+        # read and decode the response body in utf-8
         print(response.read().decode('utf-8'))
