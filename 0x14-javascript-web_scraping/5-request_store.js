@@ -16,12 +16,10 @@ request(apiUrl, function (error, response, body) {
     console.error(error);
   } else {
     // write response to file
-    fs.writeFile(file, body, 'utf-8', (error) => {
+    fs.writeFile(file, body, 'utf-8', function (error, data) {
       if (error) {
         console.error(error);
-        return;
       }
-      console.log(file);
     });
   }
 });
