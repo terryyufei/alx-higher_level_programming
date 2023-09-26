@@ -7,13 +7,20 @@ const request = require('request');
 const apiUrl = 'https://swapi-api.alx-tools.com/api/films/';
 
 // Make an HTTP GET request to the API
+let movies = 0;
 request(apiUrl, function (error, response, body) {
-  if (!error) {
-    const results = JSON.parse(body).results;
-    console.log(results.reduce((count, movie) => {
-      return movie.characters.find((character) => character.endsWith('/18/'))
-        ? count + 1
-        : count;
-    }, 0));
+  if (error) {
+    console.error(error);
+  } else {
+    const data = JSON.parse(body);
+    data.results.forEach(function (result) {
+      result.characters.forEach(function (character) {
+        const split = character.split('/');
+        if (split[split.length - 2] === '18') {
+          movies++;
+        }
+      });
+    });
+    console.log(movies);
   }
 });
