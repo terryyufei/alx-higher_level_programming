@@ -4,23 +4,20 @@
 const request = require('request');
 
 // The first argument is the API URL
-const apiUrl = 'https://swapi-api.alx-tools.com/api/films/';
+const apiUrl = process.argv[2];
 
 // Make an HTTP GET request to the API
-let movies = 0;
 request(apiUrl, function (error, response, body) {
-  if (error) {
-    console.error(error);
-  } else {
-    const data = JSON.parse(body);
-    data.results.forEach(function (result) {
-      result.characters.forEach(function (character) {
-        const split = character.split('/');
-        if (split[split.length - 2] === '18') {
-          movies++;
-        }
-      });
-    });
-    console.log(movies);
+  if (!error) {
+    // parse the JSON response
+    const results = JSON.parse(body).results;
+
+    // count no of movies where "Wedge Antilles" is present
+    const moviesWithWedge = results.reduce((count, movie) => {
+      return movie.characters.find((character) => character.endsWith('/18/'))
+        ? count + 1 // if found
+        : count; // if not found
+    }, 0); // initiliazing count to zero
+    console.log(moviesWithWedge);
   }
 });
